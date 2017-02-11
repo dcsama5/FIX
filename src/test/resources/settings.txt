@@ -1,0 +1,19 @@
+[DEFAULT]
+ConnectionType=initiator
+ReconnectInterval=60
+SenderCompID=BANZAI
+FileStorePath=incoming
+FileLogPath=outgoing
+ResetOnLogon=Y
+
+# session definition
+[SESSION]
+# inherit ConnectionType, ReconnectInterval and SenderCompID from default
+BeginString=FIX.4.2
+TargetCompID=FIXIMULATOR
+StartTime=00:00:00
+EndTime=23:59:00
+HeartBtInt=20
+SocketConnectPort=7001
+SocketConnectHost=exchange.marketcetera.com
+DataDictionary=FIX42.xml
